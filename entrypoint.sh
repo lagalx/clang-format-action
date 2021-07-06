@@ -16,7 +16,7 @@ echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
 echo "## Configuring git author..."
-git config --global user.email "clang-format@1337z.ninja"
+git config --global user.email "clang-format@4hypso.no"
 git config --global user.name "Clang Format"
 
 # Ignore workflow files (we may not touch them)
