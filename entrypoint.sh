@@ -23,7 +23,7 @@ git config --global user.name "Clang Format"
 git update-index --assume-unchanged .github/workflows/*
 
 echo "## Running clang-format on C/C++ source"
-SRC=$(git ls-tree --full-tree -r HEAD | grep -e "\.\(c\|h\|hpp\|cpp\)\$" | cut -f 2)
+SRC=$(git ls-tree --full-tree -r HEAD | grep -e "\.\(c\|h\|hpp\|cpp\|py\)\$" | cut -f 2 | grep -v "extern")
 
 clang-format -style=file -i $SRC
 
